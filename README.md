@@ -45,5 +45,5 @@ Here is a sample query result from AWS Redshift Console:
 # How to run this project
 
 - Configure the [AWS] section of the dhw.cfg file with access keys from AWS
-- Create a Redshift cluster using "Creating Redshift Cluster using the AWS python sdk.ipynb" and take a note of IAM role and host. Insert these two piece of information in dwf.cfg file
+- Create a Redshift cluster using "Creating Redshift Cluster using the AWS python sdk.ipynb" and take a note of IAM role and host. Insert these two pieces of information in the dwf.cfg file
 - After opening terminal session, set your filesystem on project root folder and run create_tables.py and then etl.py

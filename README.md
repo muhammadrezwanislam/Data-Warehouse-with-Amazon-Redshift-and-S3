@@ -6,12 +6,12 @@ Sparkify, a music streaming app startup, wants to leverage songs and user data t
 
 # Project Steps:
 
-a) Design schemas for fact and dimension tables
-b) Write a SQL CREATE statement for each of these tables and SQL DROP statements to drop tables in the beginning of the table creation process if it already exists 
-c) Launch a redshift cluster and create an IAM role that has read access to S3 using python SDK
-d) Add redshift database, secret keys and IAM role info to dwh.cfg
-e) Test by running the creating sql code and checking the table schemas in redshift database. One option is to use Query Editor in the AWS Redshift console for this
-f) Write code to load data from S3 to staging tables on Redshift
+- Design schemas for fact and dimension tables
+- Write a SQL CREATE statement for each of these tables and SQL DROP statements to drop tables in the beginning of the table creation process if it already exists 
+- Launch a redshift cluster and create an IAM role that has read access to S3 using python SDK
+- Add redshift database, secret keys and IAM role info to dwh.cfg
+- Test by running the creating sql code and checking the table schemas in redshift database. One option is to use Query Editor in the AWS Redshift console for this
+- Write code to load data from S3 to staging tables on Redshift
 g) Write code to load data from staging tables to analytics tables on Redshift
 h) Test these data loading code after creating tables and running the analytic queries on the Redshift database to compare results with the expected results
 i) Delete the Redshift cluster when done

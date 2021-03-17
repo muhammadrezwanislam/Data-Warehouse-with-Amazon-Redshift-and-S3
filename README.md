@@ -12,28 +12,28 @@ Sparkify, a music streaming app startup, wants to leverage songs and user data t
 - Add redshift database, secret keys and IAM role info to dwh.cfg
 - Test by running the creating sql code and checking the table schemas in redshift database. One option is to use Query Editor in the AWS Redshift console for this
 - Write code to load data from S3 to staging tables on Redshift
-g) Write code to load data from staging tables to analytics tables on Redshift
-h) Test these data loading code after creating tables and running the analytic queries on the Redshift database to compare results with the expected results
-i) Delete the Redshift cluster when done
+- Write code to load data from staging tables to analytics tables on Redshift
+- Test these data loading code after creating tables and running the analytic queries on the Redshift database to compare results with the expected results
+- Delete the Redshift cluster when done
 
 # Schema Design
 
 
 For this project, we have implemented this following star schema:
 
-![Database ER diagram (crow's foot)](Database ER diagram (crow's foot)_v2.0.jpeg)
+![Database ER diagram (crow's foot)](https://github.com/muhammadrezwanislam/Data-Warehouse-with-Amazon-Redshift-and-S3/blob/main/Database%20ER%20diagram%20(crow's%20foot)_v2.0.jpeg)
 
 As the fact table contains a 1 to many relationship to each of the dimensions in the data, we thought that it is appropriate to use a star schema. This database will enable the Analytics team to create recommendations to the users based on query data. Especially, they can capture live playback behavior such as song plays, artist plays, time when it is played, and more. Ultimately, this would enable the analytics team to use this behavioral data to recommend personalize playlists.
 
 # Project Files:
 Here is the list of project files and related descriptions:
 
-1) create_tables.py -  creates fact and dimension tables for the star schema in Redshift.
-2) etl.py -  load data from S3 into staging tables on Redshift and then process that data into analytics tables on Redshift.
-3) sql_queries.py - definition of SQL statements, which will be imported into the two other files above.
-4) dhw.cfg - Configuration file used that contains info about Redshift, IAM and S3
-5) Creating Redshift Cluster using the AWS python sdk.ipynb - infrastructure as code for creating Redshift clusters in AWS 
-6) Images - all relevant images related to this project 
+- create_tables.py -  creates fact and dimension tables for the star schema in Redshift.
+- etl.py -  load data from S3 into staging tables on Redshift and then process that data into analytics tables on Redshift.
+- sql_queries.py - definition of SQL statements, which will be imported into the two other files above.
+- dhw.cfg - Configuration file used that contains info about Redshift, IAM and S3
+- Creating Redshift Cluster using the AWS python sdk.ipynb - infrastructure as code for creating Redshift clusters in AWS 
+- Images - all relevant images related to this project 
 
 
 # Query Result:

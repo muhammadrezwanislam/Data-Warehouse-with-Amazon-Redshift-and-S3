@@ -2,7 +2,7 @@
 
 Sparkify, a music streaming app startup, wants to leverage songs and user data that they have been collecting from the app by analyzing and finding relevant patterns. In particular, the analytics team wants to know what are the songs that the users are listening to. However, within the current setup, it is difficult to make sense of the data. In recent times, the app has grown its user base as well as song database and want to move their processes and data onto the cloud. Up until now, their data resides in Amazon s3 Bucket, in directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app, which is not suitable for quering at all. The goal of this project is to create an ETL pipeline that extracts data from S3, stages them in Redshift, and transforms data into a set of dimensional tables for their analytics team to continue finding insights in what songs their users are listening to. Here is a short overview of the project:
 
-![ETL in context](ETL in Context.png)
+![ETL in context](https://github.com/muhammadrezwanislam/Data-Warehouse-with-Amazon-Redshift-and-S3/blob/main/ETL%20in%20Context.png)
 
 # Project Steps:
 
@@ -40,10 +40,10 @@ Here is the list of project files and related descriptions:
 
 Here is a sample query result from AWS Redshift Console:
 
-![Query Result](Query_One.png)
+![Query Result](https://github.com/muhammadrezwanislam/Data-Warehouse-with-Amazon-Redshift-and-S3/blob/main/Query_One.PNG)
 
 # How to run this project
 
-a) Configure the [AWS] section of the dhw.cfg file with access keys from AWS
-b) Create a Redshift cluster using "Creating Redshift Cluster using the AWS python sdk.ipynb" and take a note of IAM role and host. Insert these two piece of information in dwf.cfg file
-c) After opening terminal session, set your filesystem on project root folder and run create_tables.py and then etl.py
+- Configure the [AWS] section of the dhw.cfg file with access keys from AWS
+- Create a Redshift cluster using "Creating Redshift Cluster using the AWS python sdk.ipynb" and take a note of IAM role and host. Insert these two piece of information in dwf.cfg file
+- After opening terminal session, set your filesystem on project root folder and run create_tables.py and then etl.py
